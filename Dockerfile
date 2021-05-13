@@ -2,7 +2,9 @@ FROM debian:stable-slim
 
 ARG VERSION="v7.6.21"
 ARG OVERLAY_VERSION="v2.2.0.3"
-ARG OVERLAY_ARCH="amd64"
+ARG TARGETPLATFORM
+ARG OVERLAY_ARCH=$TARGETPLATFORM
+# "amd64"
 
 LABEL maintainer="yurinnick" \
       repository="https://github.com/yurinnick/folding-at-home-docker" \
